@@ -5,7 +5,7 @@ import { GEMINI_TEXT_MODEL, SUPPORTED_LANGUAGES } from '../constants';
 import { getCachedMedication, setCachedMedication } from './localStorageService';
 
 // Ensure API_KEY is available via process.env
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 if (!API_KEY) {
   console.error("CRITICAL ERROR: API_KEY for Gemini is not set in environment variables. The application will not function. Please ensure process.env.API_KEY is configured.");
   throw new Error("API_KEY for Gemini is not set. This is a deployment/environment configuration issue.");
